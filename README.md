@@ -12,9 +12,14 @@ Deploy the folder to any static host (the qadesk.net server, Netlify, GitHub Pag
 - `docs.html` — documentation hub (getting started, features, the 32 checks)
 - `changelog.html` — release notes (v0.9.4 current; earlier history TBD)
 - `about.html` — the maker story
+- `404.html` — branded not-found page (`noindex`)
 - `styles.css` — brand-matched dark theme (QAdesk palette: `#0e0e14` bg, `#6f9dff` accent); shared by all pages
 - `main.js` — mobile nav, footer year, download-link placeholder; shared by all pages
-- `assets/` — images/downloads (empty for now)
+- `robots.txt` — allows all crawlers; points to the sitemap
+- `sitemap.xml` — the five public pages, absolute `https://qadesk.net/` URLs
+- `assets/` — screenshots, favicons, and the OG share image
+
+Note: `robots.txt` and `sitemap.xml` hard-code the `https://qadesk.net` origin — update them if the site is hosted elsewhere. Configure the host to serve `404.html` as the not-found page.
 
 The nav and footer are duplicated in each page's HTML (no build step / no templating on purpose). If you change a nav link, update it across all pages.
 
