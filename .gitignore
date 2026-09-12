@@ -1,0 +1,9 @@
+# scratch / generated helper scripts
+_*.py
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.log

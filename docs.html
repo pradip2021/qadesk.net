@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QAdesk Documentation — getting started &amp; guides</title>
+  <meta name="description" content="How to use QAdesk: import files, run 32 QA checks, review issues, score with LQA, use agents, glossaries and reports." />
+  <meta property="og:title" content="QAdesk Documentation — getting started &amp; guides" />
+  <meta property="og:description" content="How to use QAdesk: import files, run 32 QA checks, review issues, score with LQA, use agents, glossaries and reports." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://qadesk.net/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0e14'/%3E%3Cpath d='M20 33l8 8 16-18' stroke='%236f9dff' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="QAdesk home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="28" height="28"><rect width="64" height="64" rx="14" fill="#151521"/><path d="M20 33l8 8 16-18" stroke="#6f9dff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-name">QAdesk</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="docs.html" aria-current="page">Docs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="btn btn-primary btn-sm" href="download.html">Get QAdesk</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Documentation</p>
+        <h1>Documentation</h1>
+        <p>Everything you need to import a file, run QA, and deliver a scored report. The full reference guide also ships inside the app under <strong>Help</strong>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container doc-layout">
+        <aside class="doc-nav" aria-label="Docs navigation">
+          <h4>Getting started</h4>
+          <a href="#start">Quick start</a>
+          <a href="#import">Importing files</a>
+          <a href="#run">Running QA</a>
+          <a href="#review">Reviewing issues</a>
+          <h4>Going further</h4>
+          <a href="#lqa">LQA scoring</a>
+          <a href="#agents">Agents &amp; AutoCorrect</a>
+          <a href="#terms">Glossaries &amp; TM</a>
+          <a href="#rules">Skills &amp; Policies</a>
+          <a href="#reports">Reports &amp; export</a>
+          <h4>Reference</h4>
+          <a href="#checks">The 32 checks</a>
+          <a href="#privacy">Privacy &amp; offline</a>
+        </aside>
+
+        <div class="doc-content">
+          <h2 id="start">Quick start</h2>
+          <p>QAdesk works in four moves: <strong>import</strong> a bilingual file, <strong>run QA</strong>, <strong>review and fix</strong> the findings, then <strong>score and export</strong> a report. No account, no setup — it opens straight to your projects.</p>
+          <ol>
+            <li>Open QAdesk and drag a file onto the <strong>Projects</strong> view (or use Import).</li>
+            <li>Press <strong>▶ Run QA</strong> from the Dashboard or the QA Issues view.</li>
+            <li>Work down the issue list — jump to segments, ignore false positives, apply safe fixes.</li>
+            <li>Score against an LQA profile and export the report.</li>
+          </ol>
+
+          <h2 id="import">Importing files</h2>
+          <p>Drop in whatever your CAT tool speaks. QAdesk lines up source and target automatically and shows the segment grid. Supported formats include XLIFF, SDLXLIFF (Trados), MQXLIFF (memoQ), Phrase/Memsource, Wordfast, TMX, TBX, SDLTB, SDLTM, Excel (XLSX), CSV, PO, JSON, SRT and Trados RTF.</p>
+          <p>You can also enable <strong>Windows Explorer integration</strong> in Settings, then right-click any file and choose <em>“Run QA with QAdesk”</em> to import and check in one step.</p>
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="shot-title">Projects</span></div><img src="assets/projects.png" alt="QAdesk Projects view listing imported files" width="1236" height="1104" loading="lazy" /></figure>
+
+          <h2 id="run">Running QA</h2>
+          <p>Press <strong>▶ Run QA</strong> to run all 32 language-neutral checks over every segment. Findings are sorted so the most severe come first, and each carries the segment number and the CAT-tool unit id so anyone can locate it.</p>
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="shot-title">QA Issues</span></div><img src="assets/qa-issues.png" alt="QAdesk QA Issues list with severity-ranked findings" width="1236" height="1104" loading="lazy" /></figure>
+
+          <h2 id="review">Reviewing issues</h2>
+          <p>Click any issue to see its details. From the detail panel:</p>
+          <ul>
+            <li><strong>↦ Go to segment</strong> — jump straight to that segment.</li>
+            <li><strong>Next →</strong> — step to the next issue in the list (the <span class="kbd">n</span> / <span class="kbd">↓</span> keys do the same).</li>
+            <li><strong>✕ Ignore issue</strong> — mark a false positive; it stays ignored on future QA runs, and the panel advances to the next issue automatically.</li>
+          </ul>
+          <p>Filter the list by severity, category, file, or check type to focus. QAdesk is careful about false positives: tags, URLs, and source-carried names that legitimately match the source are not flagged as “untranslated”.</p>
+
+          <h2 id="lqa">LQA scoring</h2>
+          <p>The <strong>LQA</strong> view grades a file against a quality profile and returns a straight <strong>PASS / FAIL</strong> with the breakdown behind it — turning your file into a quality report you can hand a client.</p>
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="shot-title">LQA — Scorecard</span></div><img src="assets/lqa-scorecard.png" alt="QAdesk LQA scorecard with category breakdown and PASS/FAIL result" width="1236" height="1104" loading="lazy" /></figure>
+
+          <h2 id="agents">Agents &amp; AutoCorrect</h2>
+          <p>Six built-in agents — Terminology, Tag, Placeholder, Number, Consistency and Style Guide — propose fixes, tell you their confidence, and, with your permission, apply the certain ones and verify their own work. Deterministic, safe fixes (double spaces, doubled punctuation, spacing) can be applied in one click via <strong>AutoCorrect</strong>, with undo. Nothing changes without your say-so.</p>
+          <figure class="shot"><div class="shot-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="shot-title">Agents — Review tasks</span></div><img src="assets/agents-tasks.png" alt="QAdesk Agents view with proposed fixes, confidence levels, and apply/verify controls" width="1236" height="1104" loading="lazy" /></figure>
+
+          <h2 id="terms">Glossaries &amp; TM</h2>
+          <p>Attach term bases (including SDLTB) and translation memories (including SDLTM) to check terminology compliance and run concordance searches. Required-term and forbidden-term checks run against your glossaries on every QA pass.</p>
+
+          <h2 id="rules">Skills &amp; Policies</h2>
+          <p><strong>Skills</strong> capture how a language or client should be handled. <strong>Policies</strong> set hard limits the agents can't cross — ideal for sensitive medical or legal work. Configure them once and every file is held to your standard automatically.</p>
+
+          <h2 id="reports">Reports &amp; export</h2>
+          <p>Export findings to <strong>Excel</strong> (color-coded, Xbench-style header), <strong>PDF</strong>, <strong>HTML</strong>, <strong>CSV</strong> or <strong>JSON</strong> — or print directly through the system dialog. Bilingual export, conversion, and write-back to the original file are built in.</p>
+
+          <h2 id="checks">The 32 checks</h2>
+          <p>QAdesk ships 32 language-neutral checks across these categories:</p>
+          <ul>
+            <li><strong>Basic</strong> — empty/untranslated target, same-as-source, repeated words.</li>
+            <li><strong>Numbers</strong> — numeric mismatch, percentages, currency (digit-system &amp; locale aware).</li>
+            <li><strong>Tags &amp; placeholders</strong> — missing/extra tags, tag order, malformed placeholders, broken markup.</li>
+            <li><strong>Punctuation</strong> — terminal punctuation, unbalanced brackets/quotes, doubled or misplaced punctuation.</li>
+            <li><strong>Casing</strong> — ALL-CAPS and CamelCase preservation.</li>
+            <li><strong>URLs &amp; whitespace &amp; Unicode</strong> — URL/email integrity, spacing, line breaks, tabs, NFC, invisible characters.</li>
+            <li><strong>Consistency &amp; terminology</strong> — inconsistent translations, glossary compliance.</li>
+            <li><strong>Length</strong> — suspicious expansion/contraction ratios.</li>
+            <li><strong>Spelling</strong> — Hunspell spelling when a dictionary is loaded.</li>
+          </ul>
+
+          <h2 id="privacy">Privacy &amp; offline</h2>
+          <p>QAdesk runs entirely on your machine — no account, no cloud, no telemetry. Your clients' files never leave your computer. An optional AI assistant runs locally through Ollama if you want it.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="14" fill="#151521"/><path d="M20 33l8 8 16-18" stroke="#6f9dff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-name">QAdesk</span></div>
+        <p class="muted small">Quality assurance for translators. Offline, private, built by a translator.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html#features">Features</a>
+        <a href="download.html">Download</a>
+        <a href="docs.html">Documentation</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+    <div class="container footer-base"><span>© <span data-year></span> QAdesk</span><span class="muted small">qadesk.net</span></div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
