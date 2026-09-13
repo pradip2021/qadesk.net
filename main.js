@@ -22,13 +22,4 @@
   // Current year in the footer
   var y = document.querySelector('[data-year]');
   if (y) y.textContent = String(new Date().getFullYear());
-
-  // Download link placeholder — wired to the real installer URL once available.
-  var dl = document.querySelector('[data-download]');
-  if (dl && dl.getAttribute('href') === '#') {
-    dl.addEventListener('click', function (e) {
-      e.preventDefault();
-      alert('The download link will be wired up once the installer URL is set.');
-    });
-  }
 })();

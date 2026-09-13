@@ -32,12 +32,23 @@ python -m http.server 8080
 
 Then visit http://localhost:8080.
 
+## Hosting (GitHub Pages)
+Repo: **https://github.com/pradip2021/qadesk.net** (`main`).
+- `CNAME` (`qadesk.net`) + `.nojekyll` are committed, so Pages serves this repo at the apex domain and skips Jekyll processing.
+- Enable once in **Settings → Pages → Source: Deploy from a branch → `main` / root**.
+- DNS at the registrar: apex `A` records to GitHub Pages `185.199.108–111.153` (+ AAAA `2606:50c0:8000–8003::153`); `www` `CNAME` → `pradip2021.github.io`. Then tick **Enforce HTTPS**.
+
+## Installer download
+The Download button points to a GitHub **Release** asset:
+`https://github.com/pradip2021/qadesk.net/releases/download/v0.9.4/QAdesk-Setup-0.9.4.exe`
+The installer is ~105 MB (over GitHub's 100 MB git limit), so it lives as a Release asset, never in the repo. On a new version, cut a release with the matching tag/filename or update the button href.
+
 ## TODO before going live
-- [ ] Wire the **Download** button to the real installer URL (`[data-download]` in `download.html` / `index.html`).
-- [x] Add real product **screenshots** — `assets/qa-issues.png` (hero), plus `lqa-scorecard`, `agents-tasks`, `qa-autocorrect` in the "See it in action" gallery. Sourced from `QAdesk/academy/shots/lib/` (real 1236×1104 UI captures).
-- [ ] Confirm **pricing / licensing** copy (none stated yet — positioned as a free download).
-- [ ] Add favicon PNGs (currently an inline SVG favicon). `og:image` is set to `assets/qa-issues.png`.
-- [ ] Point the DNS / hosting at this folder for **qadesk.net**.
+- [x] Wire the **Download** button to the installer URL (GitHub Release asset, tag `v0.9.4`).
+- [x] Add real product **screenshots**, favicons, and OG share image.
+- [ ] **Create the `v0.9.4` release** and upload `QAdesk-Setup-0.9.4.exe` (from `QAdesk/release/`) so the download link resolves.
+- [ ] **Enable GitHub Pages** + add the DNS records (above).
+- [ ] Confirm **pricing / licensing** copy (none stated — positioned as a free download).
 
 ## Content accuracy
 All feature copy is drawn from the actual QAdesk app (32 QA checks, 6 agents, LQA scoring,
