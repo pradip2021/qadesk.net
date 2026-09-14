@@ -40,8 +40,9 @@ Repo: **https://github.com/pradip2021/qadesk.net** (`main`).
 
 ## Installer download
 The Download button points to a GitHub **Release** asset:
-`https://github.com/pradip2021/qadesk.net/releases/download/v0.9.4/QAdesk-Setup-0.9.4.exe`
-The installer is ~105 MB (over GitHub's 100 MB git limit), so it lives as a Release asset, never in the repo. On a new version, cut a release with the matching tag/filename or update the button href.
+`https://github.com/pradip2021/qadesk.net/releases/download/0.9.4/QAdesk-Setup-0.9.4.exe`
+The installer is ~105 MB (over GitHub's 100 MB git limit), so it lives as a Release asset, never in the repo.
+**The URL path must match the release tag exactly** — the v0.9.4 release was tagged `0.9.4` (no `v`), so the button uses `.../download/0.9.4/...`. On a new version, keep the tag/filename convention consistent (or update the button href to match).
 
 ## TODO before going live
 - [x] Wire the **Download** button to the installer URL (GitHub Release asset, tag `v0.9.4`).
