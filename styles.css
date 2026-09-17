@@ -284,3 +284,5 @@ img { max-width: 100%; }
   .req-grid { grid-template-columns: 1fr; }
   .log-entry { grid-template-columns: 1fr; gap: 10px; }
 }
+
+.brand-name .qa { color: var(--accent); }
