@@ -1,9 +1,9 @@
 {
   "product": "QAdesk",
   "channel": "early-access",
-  "latest": "0.9.7",
-  "releaseDate": "2026-09-18",
-  "url": "https://github.com/pradip2021/qadesk.net/releases/download/v0.9.7/QAdesk-Setup-0.9.7.exe",
+  "latest": "0.9.8",
+  "releaseDate": "2026-09-19",
+  "url": "https://github.com/pradip2021/qadesk.net/releases/download/v0.9.8/QAdesk-Setup-0.9.8.exe",
   "notes": "https://qadesk.net/changelog.html",
   "mandatory": false,
   "minSupported": "0.7.0"
