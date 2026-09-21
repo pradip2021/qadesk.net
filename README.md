@@ -10,11 +10,12 @@ Deploy the folder to any static host (the qadesk.net server, Netlify, GitHub Pag
 - `index.html` — home / landing page
 - `download.html` — download + system requirements + install steps
 - `docs.html` — documentation hub (getting started, features, the 32 checks)
-- `changelog.html` — release notes (v0.9.4 current; earlier history TBD)
+- `changelog.html` — release notes (v0.10.0 current, with prior history)
 - `about.html` — the maker story
+- `brand/index.html` — brand & press kit (logos, marks, lockups; image assets live in `brand/`)
 - `404.html` — branded not-found page (`noindex`)
 - `styles.css` — brand-matched dark theme (QAdesk palette: `#0e0e14` bg, `#6f9dff` accent); shared by all pages
-- `main.js` — mobile nav, footer year, download-link placeholder; shared by all pages
+- `main.js` — mobile nav toggle + footer year; shared by all pages
 - `robots.txt` — allows all crawlers; points to the sitemap
 - `sitemap.xml` — the five public pages, absolute `https://qadesk.net/` URLs
 - `assets/` — screenshots, favicons, and the OG share image
@@ -39,17 +40,22 @@ Repo: **https://github.com/pradip2021/qadesk.net** (`main`).
 - DNS at the registrar: apex `A` records to GitHub Pages `185.199.108–111.153` (+ AAAA `2606:50c0:8000–8003::153`); `www` `CNAME` → `pradip2021.github.io`. Then tick **Enforce HTTPS**.
 
 ## Installer download
-The Download button points to a GitHub **Release** asset:
-`https://github.com/pradip2021/qadesk.net/releases/download/0.9.4/QAdesk-Setup-0.9.4.exe`
-The installer is ~105 MB (over GitHub's 100 MB git limit), so it lives as a Release asset, never in the repo.
-**The URL path must match the release tag exactly** — the v0.9.4 release was tagged `0.9.4` (no `v`), so the button uses `.../download/0.9.4/...`. On a new version, keep the tag/filename convention consistent (or update the button href to match).
+The Download button (in `download.html`) points to a GitHub **Release** asset — current:
+`https://github.com/pradip2021/qadesk.net/releases/download/v0.10.0/QAdesk-Setup-0.10.0.exe`
+The installer is ~110 MB (over GitHub's 100 MB git limit), so it lives as a Release asset, never in the repo.
+**The URL path must match the release tag exactly.** Releases are tagged `v`-prefixed (e.g. `v0.10.0`) with the asset named `QAdesk-Setup-<version>.exe`, so the button uses `.../download/v0.10.0/QAdesk-Setup-0.10.0.exe`. On a new version, bump the href to match the new tag/filename.
 
-## TODO before going live
-- [x] Wire the **Download** button to the installer URL (GitHub Release asset, tag `v0.9.4`).
-- [x] Add real product **screenshots**, favicons, and OG share image.
-- [ ] **Create the `v0.9.4` release** and upload `QAdesk-Setup-0.9.4.exe` (from `QAdesk/release/`) so the download link resolves.
-- [ ] **Enable GitHub Pages** + add the DNS records (above).
-- [ ] Confirm **pricing / licensing** copy (none stated — positioned as a free download).
+## Publishing a new version
+The site is **live** at qadesk.net (GitHub Pages, apex domain, HTTPS). For each new QAdesk release:
+1. Build the installer (`npm run dist` in the QAdesk app repo) → `QAdesk/release/QAdesk-Setup-<version>.exe`.
+2. Create a GitHub **Release** on this repo tagged `v<version>` and upload that `.exe` as the asset.
+3. Update this site and push to `main` (Pages redeploys in ~1 min):
+   - `update.json` — `latest`, `url`, `releaseDate` (the in-app auto-updater reads this).
+   - `download.html` — version badge, button href, and the meta line.
+   - `changelog.html` — add the new version entry; demote the previous "Current release".
+4. Verify live: `update.json` `latest` and the download button both resolve to the new asset.
+
+Note: installers are **not code-signed** (no cert), so `download.html` keeps a SmartScreen "Run anyway" note. Pricing copy positions QAdesk as free during Early Access.
 
 ## Content accuracy
 All feature copy is drawn from the actual QAdesk app (32 QA checks, 6 agents, LQA scoring,
