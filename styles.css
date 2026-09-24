@@ -111,10 +111,15 @@ img { max-width: 100%; }
 .shot-bar { display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: var(--bg-2); border-bottom: 1px solid var(--border); }
 .shot-bar .dot { width: 11px; height: 11px; border-radius: 50%; background: #33333f; }
 .shot-title { margin-left: 10px; color: var(--faint); font-size: 0.82rem; }
-.shot img { display: block; width: 100%; height: auto; }
+.shot img { display: block; width: 100%; height: auto; cursor: zoom-in; }
 .shot-hero { transform: rotate(0.4deg); }
 .shot figcaption { padding: 14px 16px; color: var(--dim); font-size: 0.92rem; border-top: 1px solid var(--border); background: var(--bg-2); }
 .shot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+/* click-to-zoom lightbox */
+.lightbox { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 4vmin; background: rgba(6,6,12,0.93); cursor: zoom-out; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 96vw; max-height: 92vh; width: auto; height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 24px 80px rgba(0,0,0,0.6); }
 
 /* ---- trust strip ---- */
 .strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-2); }
@@ -132,6 +137,8 @@ img { max-width: 100%; }
 
 /* ---- features ---- */
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+/* Centre a lone card on the last row (e.g. a 7th) in the 3-col grid */
+.feature-grid > .card:last-child:nth-child(3n+1) { grid-column: 2 / 3; }
 .card {
   background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 28px 26px; transition: border-color .2s ease, transform .2s ease;
