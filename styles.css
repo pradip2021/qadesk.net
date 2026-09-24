@@ -193,6 +193,8 @@ img { max-width: 100%; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { order: -1; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  /* centering rule is desktop-only; don't force a column in 2-/1-col layouts */
+  .feature-grid > .card:last-child:nth-child(3n+1) { grid-column: auto; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .strip-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
   .shot-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
